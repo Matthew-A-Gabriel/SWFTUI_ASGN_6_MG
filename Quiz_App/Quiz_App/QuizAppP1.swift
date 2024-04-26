@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct QuizAppP1: View {
+    @Binding var questions: question
     var body: some View {
         NavigationStack{
             VStack{
                 Text("Question 1")
+                Text("Score: _")
                     .fontWeight(.bold)
                     .font(.largeTitle)
                 NavigationLink(destination: {
@@ -32,5 +34,5 @@ struct QuizAppP1: View {
 }
 
 #Preview {
-    QuizAppP1()
+    QuizAppP1(questions: .constant([]), questionVar: question(question1: false, question2: false, question3: false))
 }

@@ -12,6 +12,7 @@ struct QuizAppP2: View {
         NavigationStack{
             VStack{
                 Text("Question 2")
+                Text("Score: _")
                     .fontWeight(.bold)
                     .font(.largeTitle)
                 NavigationLink(destination: {
