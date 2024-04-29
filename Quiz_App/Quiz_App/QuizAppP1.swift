@@ -8,14 +8,36 @@
 import SwiftUI
 
 struct QuizAppP1: View {
-    @Binding var questions: question
+    @Binding var questions: [Question]
+    @State var leQuestions: String = "question [here]"
+    @State var leAnswers: [String] = ["a","b","c"]
+    @State var leCorrect: String = "d"
+    @State private var questionCounter: Int = 1
     var body: some View {
         NavigationStack{
             VStack{
-                Text("Question 1")
+                Text("Question \(questionCounter)")
                 Text("Score: _")
                     .fontWeight(.bold)
                     .font(.largeTitle)
+                
+                Text("\(leQuestions)")
+                    .fontWeight(.bold)
+                    .font(.largeTitle)
+                    .padding()
+                    .background(.black)
+                    .border(Color.gray)
+                    .cornerRadius(10)
+                Text("\(leAnswers[0])")
+                Text("\(leAnswers[1])")
+                Text("\(leAnswers[2])")
+                Text("\(leCorrect)")
+                
+                
+                
+                
+                
+                
                 NavigationLink(destination: {
                     QuizAppP2()
                 }, label: {
@@ -34,5 +56,5 @@ struct QuizAppP1: View {
 }
 
 #Preview {
-    QuizAppP1(questions: .constant([]), questionVar: question(question1: false, question2: false, question3: false))
+    QuizAppP1(questions: .constant([]))
 }

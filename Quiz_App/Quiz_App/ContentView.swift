@@ -24,19 +24,19 @@ struct ContentView: View {
         Question(question: "Which of these cards require 3 Tributes", options: ["Kuriboh","the Mega Monarchs","The Elemental Lords"], correctAns: "The Earth Bound Immortals"),
         Question(question: "Which of these send your oppenents monsters to the deck", options: ["Mirror Force","Blazing Mirror Force","Raigeki"], correctAns: "Drowning Mirror Force"),
         Question(question: "What card can King's Knight Special Summon", options: ["Queen's Knight","King's Knight","Flame Swordsman"], correctAns: "Jack's Knight"),
-        Question(question: "", options: ["","",""], correctAns: ""),
-        Question(question: "", options: ["","",""], correctAns: ""),
+        Question(question: "Which card set all share the ability to attack directly", options: ["Monarchs","Gaia the Fierce Knight","Destiny Heros"], correctAns: "Toon"),
+        Question(question: "Solemn Judgement is an example of a", options: ["Quick Play Spell","Normal Spell","Continuous Trap"], correctAns: "Counter Trap"),
 
 
     ]
     var body: some View {
         NavigationStack{
             VStack{
-                Text("YuGiOH Quiz")
+                Text("Yu-Gi-Oh Quiz")
                     .fontWeight(.bold)
                     .font(.largeTitle)
                 NavigationLink( "Begin", destination: {
-                    QuizAppP1(questions: $questions, questionVar: questions[index])
+                    QuizAppP1(questions: $questions)
                     }
                 )
                 .frame(width:100, height: 50)
