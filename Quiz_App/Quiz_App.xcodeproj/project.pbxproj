@@ -15,8 +15,6 @@
 		333A45AE2BD80D6300B5F9CF /* Quiz_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333A45AD2BD80D6300B5F9CF /* Quiz_AppUITests.swift */; };
 		333A45B02BD80D6300B5F9CF /* Quiz_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333A45AF2BD80D6300B5F9CF /* Quiz_AppUITestsLaunchTests.swift */; };
 		333A45BD2BDAB53C00B5F9CF /* QuizAppP1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333A45BC2BDAB53C00B5F9CF /* QuizAppP1.swift */; };
-		333A45BF2BDAB54B00B5F9CF /* QuizAppP2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333A45BE2BDAB54B00B5F9CF /* QuizAppP2.swift */; };
-		333A45C12BDAB55B00B5F9CF /* QuizAppP3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333A45C02BDAB55B00B5F9CF /* QuizAppP3.swift */; };
 		333A45C32BDAB56900B5F9CF /* QuizAppEnd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 333A45C22BDAB56900B5F9CF /* QuizAppEnd.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,8 +47,6 @@
 		333A45AD2BD80D6300B5F9CF /* Quiz_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz_AppUITests.swift; sourceTree = "<group>"; };
 		333A45AF2BD80D6300B5F9CF /* Quiz_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		333A45BC2BDAB53C00B5F9CF /* QuizAppP1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizAppP1.swift; sourceTree = "<group>"; };
-		333A45BE2BDAB54B00B5F9CF /* QuizAppP2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizAppP2.swift; sourceTree = "<group>"; };
-		333A45C02BDAB55B00B5F9CF /* QuizAppP3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizAppP3.swift; sourceTree = "<group>"; };
 		333A45C22BDAB56900B5F9CF /* QuizAppEnd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizAppEnd.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,8 +101,6 @@
 				333A45922BD80D6000B5F9CF /* Quiz_AppApp.swift */,
 				333A45942BD80D6000B5F9CF /* ContentView.swift */,
 				333A45BC2BDAB53C00B5F9CF /* QuizAppP1.swift */,
-				333A45BE2BDAB54B00B5F9CF /* QuizAppP2.swift */,
-				333A45C02BDAB55B00B5F9CF /* QuizAppP3.swift */,
 				333A45C22BDAB56900B5F9CF /* QuizAppEnd.swift */,
 				333A45962BD80D6200B5F9CF /* Assets.xcassets */,
 				333A45982BD80D6200B5F9CF /* Preview Content */,
@@ -272,8 +266,6 @@
 				333A45C32BDAB56900B5F9CF /* QuizAppEnd.swift in Sources */,
 				333A45BD2BDAB53C00B5F9CF /* QuizAppP1.swift in Sources */,
 				333A45952BD80D6000B5F9CF /* ContentView.swift in Sources */,
-				333A45BF2BDAB54B00B5F9CF /* QuizAppP2.swift in Sources */,
-				333A45C12BDAB55B00B5F9CF /* QuizAppP3.swift in Sources */,
 				333A45932BD80D6000B5F9CF /* Quiz_AppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

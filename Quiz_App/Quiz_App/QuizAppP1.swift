@@ -12,7 +12,9 @@ struct QuizAppP1: View {
     @State var leQuestions: String = "question [here]"
     @State var leAnswers: [String] = ["a","b","c"]
     @State var leCorrect: String = "d"
+    @State private var isVisable: Bool = false
     @State private var questionCounter: Int = 1
+    @State private var savedValue: String = ""
     var body: some View {
         NavigationStack{
             VStack{
@@ -24,32 +26,55 @@ struct QuizAppP1: View {
                 Text("\(leQuestions)")
                     .fontWeight(.bold)
                     .font(.largeTitle)
+                    .foregroundStyle(.white)
                     .padding()
                     .background(.black)
                     .border(Color.gray)
                     .cornerRadius(10)
-                Text("\(leAnswers[0])")
-                Text("\(leAnswers[1])")
-                Text("\(leAnswers[2])")
-                Text("\(leCorrect)")
+                Button("\()"){
+                    
+                }
+                Button("\(leAnswers[1])"){
+                    
+                }
+                Button("\(leAnswers[2])"){
+                    
+                }
+                Button("\(leCorrect)"){
+                    
+                }
                 
                 
+                Button("Submit"){
+                    isVisable.toggle()
+                }
+                .opacity(questionCounter == 10 ? 0 : 1)
                 
-                
-                
-                
-                NavigationLink(destination: {
-                    QuizAppP2()
-                }, label: {
-                    Text("Next")
-                        .frame(width:100, height: 50)
-                        .foregroundColor(.white)
-                        .padding(.vertical)
-                        .padding(.horizontal, 120)
-                        .background(.blue)
-                        .cornerRadius(20)
-                        .font(.system(size: 30))
-                })
+                if questionCounter <= 9 {
+                    Button("Next Question"){
+                        isVisable.toggle()
+                        questionCounter += 1
+                    }
+                    .frame(width:100, height: 50)
+                    .foregroundColor(.white)
+                    .padding(.vertical)
+                    .padding(.horizontal, 120)
+                    .background(.blue)
+                    .cornerRadius(20)
+                    .font(.system(size: 30))
+                    .opacity(isVisable ? 1 : 0)
+                }
+                else {
+                    NavigationLink(destination: {
+                        QuizAppEnd()
+                    }, label: {
+                        Text("Next")
+
+                    })
+                    .opacity(questionCounter == 10 ? 1 : 0)
+                }
+
+
             }
         }
     }
