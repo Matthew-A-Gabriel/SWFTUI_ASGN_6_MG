@@ -8,30 +8,45 @@
 import SwiftUI
 
 struct QuizAppEnd: View {
+//    Takes score and puts it in this variable
+    var finScore: Int
+//    Body, Nav, ZStack
     var body: some View {
-        NavigationStack{
-            VStack{
-                Text("The End")
-                Text("Final Score: _ / _")
-                    .fontWeight(.bold)
-                    .font(.largeTitle)
-                NavigationLink(destination: {
-                    ContentView()
-                }, label: {
-                    Text("Restart")
-                        .frame(width:100, height: 50)
-                        .foregroundColor(.white)
-                        .padding(.vertical)
-                        .padding(.horizontal, 120)
-                        .background(.blue)
+        NavigationView{
+            ZStack{
+//                From "Mound of the bound creator"
+                Image("yugiohBG3")
+                    .resizable()
+                    .frame(width: 450, height: 880)
+//                VStack, the final Score is shown out of ten and the Restart button takes you back to the beginning if you want to try again, they share the common color scheme of black and yellow
+                VStack{
+                    Text("Final Score: \(finScore) / 10")
+                        .frame(width: 300, height: 100)
+                        .fontWeight(.bold)
+                        .font(.largeTitle)
+                        .background(.black)
+                        .foregroundColor(.yellow)
                         .cornerRadius(20)
-                        .font(.system(size: 30))
-                })
+                        .padding()
+                    NavigationLink(destination: {
+                        ContentView()
+                    }, label: {
+                        Text("Restart")
+                            .frame(width:100, height: 50)
+                            .foregroundColor(.yellow)
+                            .padding(.vertical)
+                            .padding(.horizontal, 120)
+                            .background(.black)
+                            .border(Color.gray)
+                            .cornerRadius(20)
+                            .font(.system(size: 30))
+                    })
+                }
             }
         }
     }
 }
 
 #Preview {
-    QuizAppEnd()
+    QuizAppEnd(finScore: 0)
 }
